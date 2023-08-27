@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 90.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background-color: #eee;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 9%;
+  background-color: #fff;
+  /* box-shadow: .1rem .1rem rgb(39, 39, 39); */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.2),
+    0px 8px 16px rgba(0, 0, 0, 0.2), 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  background-image: url(/images/nav-logo.png);
+  height: 80px;
+  width: 150px;
+  background-size: cover;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  margin-top: -22px;
+  margin-bottom: -22px;
+  margin-left: -120px;
+}
+
+.header .nav-menu a {
+  font-size: 16px;
+  margin: 0 1rem;
+  color: #130f40;
+}
+
+.nav-menu a:hover {
+  color: #7bc043;
+}
+
+.header .icons div {
+  height: 2.1rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  /* border: 1px solid; */
+  vertical-align: middle;
+  background: #eee;
+  color: #130f40;
+  font-size: 1.2rem;
+  margin-right: 2rem;
+  padding-top: 5.5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header .icons div:hover {
+  background: #7bc043;
+  color: white;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.header .nav-menu.active {
+  right: 1.5rem;
+  transition: 0.4s linear;
+}
+
+.header .search-form {
+  /* border: 1px solid; */
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  max-width: 50rem;
+  height: 2.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.1rem 0.1rem rgb(39, 39, 39);
+}
+
+.header .search-form.active {
+  right: 2.1rem;
+  transition: 0.4s linear;
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  text-transform: none;
+  font-size: 1rem;
+  color: black;
+  padding: 0 1rem;
+  margin-bottom: 2.1px;
+  align-items: center;
+}
+
+.header .search-form label {
+  font-size: 1.2rem;
+  padding-right: 0.7rem;
+  margin-left: 10px;
+  color: #130f40;
+  cursor: pointer;
+}
+
+.header .search-form label:hover {
+  color: #7bc043;
+}
+
+/* media queires */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 90px;
+    height: 45px;
+    margin-left: 10px;
+    background-size: cover;
+  }
+
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .nav-menu {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 20rem;
+    box-shadow: 0.1rem 0.1rem rgb(39, 39, 39);
+    background: #fff;
+    border-radius: 0.5rem;
+  }
+
+  .header .nav-menu a {
+    font-size: 1.5rem;
+    display: block;
+    margin: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .logo {
+    padding-left: 400px;
+    height: 50px;
+    width: 120px;
+    background-size: cover;
+  }
+}
+
+/* @media(max-width:360px)
+{
+    .logo{
+        width: 2pxpx;
+        height: 45px;
+        margin-left: -120px;
+        background-size: cover;
+        
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .nav-menu{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 20rem;
+        box-shadow: .1rem .1rem rgb(39, 39, 39); 
+        background: #fff;
+        border-radius: 0.5rem;
+    }
+
+    .header .nav-menu a{
+        font-size:1.5rem; 
+        display: block;
+        margin: 2rem 2.5rem;
+    }
+} */
+
+/* hero-section */
+
+.hero-section img {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.para {
+  font-size: 16px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  background-color: #f2f2f2;
+}
+
+.para h3{
+  font-size: 33px;
+  color: #7bc043;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* footer styling */
+
+.foot-panel1 {
+  background-color: #37475a;
+  align-items: end;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.foot-panel1 a i{
+  color: #ffff;
+  font-size: 26px;
+  font-weight: 400;
+
+}
+
+.foot-panel1:hover,
+.foot-panel1 a i:hover {
+  background-color: rgb(66, 86, 97);
+  /* color: #7bc043; */
+}
+
+.foot-panel2 {
+  background-color: #222f3d;
+  height: 250px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.foot-panel2 ul {
+  padding: 35px 15px 0;
+}
+
+.foot-panel2 ul a {
+  font-size: 13.5px;
+  height: 18px;
+  width: 95%;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  color: #dddddd;
+}
+
+.foot-panel2 a i {
+  padding-right: 10px;
+}
+
+.foot-panel2 ul p {
+  color: white;
+  font-size: 16px;
+  height: 16px;
+  margin-bottom: 17px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.foot-panel3 {
+  background-color: #222f3d;
+  color: #dddddd;
+  font-size: 13px;
+  height: 90px;
+  border-top: 1px solid #3a4553;
+  padding-top: 25px;
+  padding-bottom: 80px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.foot-panel3 div {
+  height: 18px;
+  color: #dddddd;
+  margin: 3px 3px;
+  padding-bottom: 2px;
+}
+
+.foot-panel3 div a {
+  color: #eee;
+  padding: 10px;
+}
+
+/* CSS for about page */
+
+.about {
+  font-size: 16px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px ;
+  background-color: #f2f2f2;
+}
+
+.about h3{
+  font-size: 30px;
+  height: 12px;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  color: #222222;
+
+}
+
+.about-team{
+  background-color: white;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+
+.about-team h3{
+  font-size: 30px;
+  height: 12px;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  color: #222222;
+
+}
+
+
+/* CSS for Project Page */
+
+
+
+/* CSS for Contact Page */
+
+.banner img {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-msg {
+  font-style: "Poppins";
+  color: #222222;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 45px 0 62px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.container input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  width: 120px;
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #7bc043;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.popup-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 0.5px solid #888888;
+  width: 30%;
+  font-weight: bolder;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.popup-content button {
+  display: block;
+  margin: 0 auto;
+  padding: 2px 5px;
+  border: 1px solid #888888;
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.popup-content button:hover {
+  background: #7bc043;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+
+h1 {
+  /* color: #222222; */
+  color: #7bc043;
+}
+
+.contact-container {
+  padding-top: 55px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.contact-container ul {
+  padding-right: 10px;
+  padding-left: 60px;
+  margin-right: 25px;
+  height: 225px;
+  width: 366px;
+}
+
+.contact-container ul a {
+  font-size: 13px;
+  height: 18px;
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+.contact-container ul p {
+  font-size: 22px;
+  height: 43px;
+  color: #333333;
+  padding-bottom: 10px;
+  margin-top: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
